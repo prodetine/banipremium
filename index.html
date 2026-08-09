@@ -3,10 +3,315 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Тестовый сайт</title>
+  <title>Бани-бочки Премиум — производство в Александрове</title>
+  <meta name="description" content="Премиальные бани-бочки из ели камерной сушки. Производство в Александрове. Гарантия 1 год, изготовление от 3 недель.">
+  <meta name="theme-color" content="#263a31">
+  <meta property="og:title" content="Бани-бочки Премиум">
+  <meta property="og:description" content="Производим бани, в которых хочется остаться. Ель камерной сушки, продуманная комплектация и гарантия 1 год.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://banizhochki.pages.dev/">
+  <meta property="og:image" content="https://banizhochki.pages.dev/assets/viking.jpg">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Связка работает</h1>
-  <p>GitHub → Cloudflare Pages</p>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Бани-бочки Премиум — на главную">
+        <img src="assets/logo.png" alt="Бани-бочки Премиум" width="270" height="88">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Меню</button>
+      <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
+        <a href="#catalog">Модели</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <a class="phone-link" href="tel:+79157750909">+7 915 775-09-09</a>
+        <a class="button button-small" href="#request">Рассчитать баню</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Собственное производство · Александров</p>
+          <h1>Баня, в которой<br><em>хочется остаться</em></h1>
+          <p class="hero-lead">Премиальные бани-бочки из экологичного вологодского леса. Продуманная конструкция, честная комплектация и уверенность в каждой детали.</p>
+          <div class="hero-buttons">
+            <a class="button" href="#catalog">Выбрать модель</a>
+            <a class="button button-ghost" href="#contacts">Посетить площадку</a>
+          </div>
+          <dl class="hero-facts">
+            <div><dt>от 200 000 ₽</dt><dd>стоимость бани</dd></div>
+            <div><dt>от 3 недель</dt><dd>срок изготовления</dd></div>
+            <div><dt>1 год</dt><dd>официальная гарантия</dd></div>
+          </dl>
+        </div>
+        <aside class="hero-card reveal" id="request" aria-labelledby="request-title">
+          <span class="hero-card-kicker">Бесплатная консультация</span>
+          <h2 id="request-title">Подберём баню под ваш участок и бюджет</h2>
+          <p>Оставьте контакты — перезвоним, ответим на вопросы и зафиксируем расчёт.</p>
+          <form class="lead-form" data-lead-form>
+            <label>
+              <span>Ваше имя</span>
+              <input type="text" name="name" autocomplete="name" maxlength="80" placeholder="Например, Алексей" required>
+            </label>
+            <label>
+              <span>Телефон</span>
+              <input type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="+7 999 000-00-00" required>
+            </label>
+            <label class="honeypot" aria-hidden="true">Сайт<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+            <label class="consent">
+              <input type="checkbox" name="consent" required>
+              <span>Согласен с <a href="privacy.html" target="_blank">политикой обработки данных</a></span>
+            </label>
+            <button class="button button-full" type="submit">Получить консультацию</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </aside>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">Листайте, чтобы познакомиться ближе</div>
+    </section>
+
+    <section class="trust-strip" aria-label="Ключевые преимущества">
+      <div class="container trust-grid">
+        <div><span>01</span><strong>Ель камерной сушки</strong><small>вологодский лес</small></div>
+        <div><span>02</span><strong>Мини-брус 95 мм</strong><small>стабильная геометрия</small></div>
+        <div><span>03</span><strong>Полки из осины</strong><small>комфортный жар</small></div>
+        <div><span>04</span><strong>Покраска в 2 слоя</strong><small>защита круглый год</small></div>
+      </div>
+    </section>
+
+    <section class="section catalog" id="catalog">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Коллекция</p>
+            <h2>Семь характеров.<br>Один стандарт качества.</h2>
+          </div>
+          <p>От компактной классической бочки до просторных архитектурных моделей. Каждую баню адаптируем по цвету кровли и защитного покрытия.</p>
+        </div>
+        <div class="catalog-grid">
+          <article class="model-card model-card-wide reveal">
+            <img src="assets/viking.jpg" alt="Баня Викинг" width="1800" height="1200" loading="lazy">
+            <div class="model-overlay">
+              <span class="model-number">01</span>
+              <div><h3>Викинг</h3><p>Выразительная двухчастная архитектура</p></div>
+              <strong>от 395 000 ₽</strong>
+            </div>
+          </article>
+          <article class="model-card reveal">
+            <img src="assets/quadro-oval.jpg" alt="Баня Квадро-овал" width="1020" height="574" loading="lazy">
+            <div class="model-overlay"><span class="model-number">02</span><div><h3>Квадро-овал</h3><p>Простор и мягкая геометрия</p></div><strong>от 550 000 ₽</strong></div>
+          </article>
+          <article class="model-card reveal">
+            <img src="assets/quadro-bochka.jpg" alt="Баня Квадро-бочка" width="1020" height="574" loading="lazy">
+            <div class="model-overlay"><span class="model-number">03</span><div><h3>Квадро-бочка</h3><p>Практичный формат для участка</p></div><strong>от 210 000 ₽</strong></div>
+          </article>
+          <article class="model-card reveal">
+            <img src="assets/quadro-deluxe.jpg" alt="Баня Квадро Делюкс" width="1800" height="1013" loading="lazy">
+            <div class="model-overlay"><span class="model-number">04</span><div><h3>Квадро Делюкс</h3><p>Панорамное остекление и максимум света</p></div><strong>от 600 000 ₽</strong></div>
+          </article>
+          <article class="model-card reveal">
+            <img src="assets/parus.jpg" alt="Баня Парус" width="709" height="927" loading="lazy">
+            <div class="model-overlay"><span class="model-number">05</span><div><h3>Парус</h3><p>Современный силуэт с прямой стеной</p></div><strong>от 390 000 ₽</strong></div>
+          </article>
+          <article class="model-card reveal">
+            <img src="assets/bochka.jpg" alt="Классическая баня-бочка" width="905" height="960" loading="lazy">
+            <div class="model-overlay"><span class="model-number">06</span><div><h3>Баня-бочка</h3><p>Компактная классика</p></div><strong>от 200 000 ₽</strong></div>
+          </article>
+          <article class="model-card reveal">
+            <img src="assets/trailer.jpg" alt="Баня на прицепе" width="664" height="517" loading="lazy">
+            <div class="model-overlay"><span class="model-number">07</span><div><h3>На прицепе</h3><p>Мобильная баня для новых маршрутов</p></div><strong>от 350 000 ₽</strong></div>
+          </article>
+        </div>
+        <div class="catalog-note reveal">
+          <p>Цена зависит от размера и выбранных решений. Точный расчёт фиксируется в договоре.</p>
+          <a class="text-link" href="#request-bottom">Получить расчёт модели →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section advantages" id="advantages">
+      <div class="container advantages-layout">
+        <div class="advantages-intro reveal">
+          <p class="eyebrow">Почему мы</p>
+          <h2>Материалы и решения, которые работают годами</h2>
+          <p>Мы не экономим на скрытых деталях. Именно они определяют, как баня поведёт себя после первого сезона.</p>
+          <div class="gift-card">
+            <span>Каждому покупателю в подарок</span>
+            <strong>Дровник «Сота» и подспинники в комнату отдыха</strong>
+          </div>
+        </div>
+        <div class="advantage-list">
+          <article class="advantage-item reveal"><span>01</span><div><h3>Ель, а не сосна</h3><p>Сосна смолит по всей структуре дерева. У ели смола находится в отдельных карманах, которые мы отбраковываем. Используем экологичный вологодский лес камерной сушки.</p></div></article>
+          <article class="advantage-item reveal"><span>02</span><div><h3>Мини-брус шириной 95 мм</h3><p>Узкий брус меньше реагирует на набор и потерю влажности. Баню не «крутит» по сезонам, а стяжные ленты не требуют постоянной регулировки.</p></div></article>
+          <article class="advantage-item reveal"><span>03</span><div><h3>Полки и лавки из осины</h3><p>Осина не нагревается до ожога, не смолит и не темнеет от влаги — проверенная классика для комфортной парной.</p></div></article>
+          <article class="advantage-item reveal"><span>04</span><div><h3>Полная обработка и защита</h3><p>Изнутри — антисептик. Снаружи — защитный состав в два слоя. Под мягкой кровлей — обязательный подкровельный ковёр, защищающий от протечек.</p></div></article>
+          <article class="advantage-item reveal"><span>05</span><div><h3>Гарантия 1 год</h3><p>На конструкцию, кровлю и сборку. Если что-то пойдёт не так — приедем и устраним.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section specification" id="equipment">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">Уже включено</p><h2>Стандартная комплектация</h2></div>
+          <p>Баня готова к полноценному отдыху: от печи и электрики до вентиляции и защитной обработки.</p>
+        </div>
+        <div class="spec-grid reveal">
+          <ul>
+            <li>Вход с торца</li>
+            <li>Дровяная печь «Термофор ОСА» на 20 кг камней</li>
+            <li>Дымоход из нержавеющей стали в сборе</li>
+            <li>Бак для воды 50 л из нержавеющей стали</li>
+            <li>Лежаки и трапик из осины в парной</li>
+            <li>Комплект электрики и освещения</li>
+            <li>Две скамейки и трапик в комнате отдыха</li>
+            <li>Ступенька перед входом</li>
+          </ul>
+          <ul>
+            <li>Защита от нагрева из минерита</li>
+            <li>Обручи из нержавеющей стали с замками</li>
+            <li>Глухая деревянная входная дверь</li>
+            <li>Двери из закалённого стекла 8 мм</li>
+            <li>Подспинники в комнате отдыха</li>
+            <li>Слив и вентиляция</li>
+            <li>Кровля из гибкой черепицы на выбор</li>
+            <li>Форточка в парной 30 × 40 см</li>
+          </ul>
+        </div>
+        <p class="spec-footnote reveal">Цвет кровли и наружного защитного состава выбирается вместе с клиентом.</p>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section-heading reveal"><div><p class="eyebrow">Как проходит заказ</p><h2>Три понятных шага<br>до первой растопки</h2></div><p>Точный срок называем при заказе и фиксируем в договоре — от 3 недель до 2 месяцев в зависимости от модели и загрузки производства.</p></div>
+        <ol class="process-grid">
+          <li class="reveal"><span>01</span><h3>Оформление заказа</h3><p>Бесплатная консультация, выбор модели и комплектации. Заключаем договор с фиксированными ценой и сроком.</p></li>
+          <li class="reveal"><span>02</span><h3>Изготовление</h3><p>Производим баню в Александрове, обрабатываем древесину и проверяем качество каждого узла.</p></li>
+          <li class="reveal"><span>03</span><h3>Доставка и установка</h3><p>Привозим баню полностью собранной либо собираем на участке клиента. Сборка в разобранном виде занимает 5–7 дней.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-heading reveal"><div><p class="eyebrow">Наши работы</p><h2>Бани, которые уже<br>стали частью участка</h2></div><p>Нажмите на фотографию, чтобы рассмотреть детали.</p></div>
+        <div class="gallery-grid">
+          <button class="gallery-item gallery-item-large" type="button" data-lightbox="assets/viking.jpg" aria-label="Открыть фото бани Викинг"><img src="assets/viking.jpg" alt="Баня Викинг на выставочной площадке" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-lightbox="assets/quadro-deluxe.jpg" aria-label="Открыть фото Квадро Делюкс"><img src="assets/quadro-deluxe.jpg" alt="Баня Квадро Делюкс с панорамным окном" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-lightbox="assets/quadro-oval.jpg" aria-label="Открыть фото Квадро-овал"><img src="assets/quadro-oval.jpg" alt="Баня Квадро-овал на участке" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-lightbox="assets/bochka.jpg" aria-label="Открыть фото классической бани-бочки"><img src="assets/bochka.jpg" alt="Классическая белая баня-бочка" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-lightbox="assets/trailer.jpg" aria-label="Открыть фото бани на прицепе"><img src="assets/trailer.jpg" alt="Мобильная баня на прицепе" loading="lazy"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section-heading reveal"><div><p class="eyebrow">Говорят владельцы</p><h2>Отзывы с Яндекс Карт</h2></div><p>Реальные впечатления после доставки, сборки и первых месяцев использования.</p></div>
+        <div class="reviews-track">
+          <article class="review-card reveal"><div class="review-top"><span class="review-stars">★★★★★</span><span>Яндекс Карты</span></div><blockquote>«Долго выбирали баню для себя. Остановили свой выбор на Бани Премиум. Ни одной минуты не пожалели. Мы просто в восторге. Алексей и Оксана — профессионалы своего дела, а ребята собрали баню классно и быстро. Баня как игрушка».</blockquote><a href="https://yandex.ru/maps/user/r36uur2uudp9m83pemyaw59unw" target="_blank" rel="noopener"><strong>Татьяна Т.</strong><small>Знаток города 4 уровня</small></a></article>
+          <article class="review-card reveal"><div class="review-top"><span class="review-stars">★★★★★</span><span>Яндекс Карты</span></div><blockquote>«Отличная баня. Очень довольны. Работы сделаны в срок, качественно и аккуратно. Благодарим за работу. Всё сделано в срок. Рекомендуем».</blockquote><a href="https://yandex.ru/maps/user/3hn6x4hma23pxzuruyyp9jdtur" target="_blank" rel="noopener"><strong>Ирина Кубарева</strong><small>Покупатель</small></a></article>
+          <article class="review-card reveal"><div class="review-top"><span class="review-stars">★★★★★</span><span>Яндекс Карты</span></div><blockquote>«Заказали баню со сборкой на участке. Ребята приехали, собрали за несколько дней профессионально. Паримся каждые выходные. Топится очень быстро даже в сильный мороз. Работают настоящие профессионалы».</blockquote><a href="https://yandex.ru/maps/user/31q49k7nmx63cthxn8d754a3p0" target="_blank" rel="noopener"><strong>Лапуська</strong><small>Знаток города 3 уровня</small></a></article>
+          <article class="review-card reveal"><div class="review-top"><span class="review-stars">★★★★★</span><span>Яндекс Карты</span></div><blockquote>«Купили баню в ноябре 2025 года. Доставка, сборка — всё в срок, качественно. Уже полгода топим баню и паримся каждые выходные. Очень довольны! Отдельное спасибо Алексею за грамотные консультации».</blockquote><a href="https://yandex.ru/maps/user/rfznec0xqg8h744g6x9df82270" target="_blank" rel="noopener"><strong>Виктория Г.</strong><small>Знаток города 4 уровня</small></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section video-section">
+      <div class="container video-layout">
+        <div class="video-copy reveal"><p class="eyebrow">Наш YouTube</p><h2>Производство,<br>люди и немного юмора</h2><p>Показываем наши бани и жизнь команды без постановочных декораций.</p><a class="text-link" href="https://www.youtube.com/@%D0%B1%D0%B0%D0%BD%D0%B8.%D0%BF%D1%80%D0%B5%D0%BC%D0%B8%D1%83%D0%BC" target="_blank" rel="noopener">Перейти на канал →</a></div>
+        <div class="video-frame reveal"><iframe src="https://www.youtube-nocookie.com/embed/LUxHPHp4oO4" title="Последнее видео канала Бани Бочки Премиум" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-intro reveal"><p class="eyebrow">Ответы на вопросы</p><h2>Коротко о главном</h2><p>Если вашего вопроса нет в списке, оставьте заявку — всё обсудим без спешки.</p></div>
+        <div class="faq-list">
+          <details class="reveal"><summary>Сколько времени занимает изготовление?</summary><p>От 3 недель до 2 месяцев. Срок зависит от выбранной модели и текущей загрузки производства. Точную дату фиксируем в договоре.</p></details>
+          <details class="reveal"><summary>Можно ли собрать баню непосредственно на участке?</summary><p>Да. Баню можно привезти в разобранном состоянии и собрать на участке клиента. Такая сборка занимает 5–7 дней.</p></details>
+          <details class="reveal"><summary>Что входит в гарантию?</summary><p>Гарантия действует 1 год на конструкцию, кровлю и выполненную сборку.</p></details>
+          <details class="reveal"><summary>Какая древесина используется?</summary><p>Для корпуса используем ель камерной сушки из экологичного вологодского леса. Полки, лавки и трапики в парной изготавливаем из осины.</p></details>
+          <details class="reveal"><summary>Можно ли выбрать цвет?</summary><p>Да, цвет гибкой черепицы и наружного защитного состава выбирается по желанию клиента.</p></details>
+          <details class="reveal"><summary>Как можно оплатить заказ?</summary><p>Оплата возможна наличными или банковской картой. Условия и этапы оплаты фиксируются в договоре.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section documents" id="documents">
+      <div class="container">
+        <div class="section-heading reveal"><div><p class="eyebrow">Документы</p><h2>Всё закрепляем письменно</h2></div><p>Фиксируем выбранную комплектацию, стоимость, срок изготовления и гарантийные обязательства.</p></div>
+        <div class="document-grid">
+          <div class="document-card reveal"><span>01</span><strong>Договор</strong><small>Содержание готовится</small></div>
+          <div class="document-card reveal"><span>02</span><strong>Акт сдачи-приёмки</strong><small>Содержание готовится</small></div>
+          <div class="document-card reveal"><span>03</span><strong>Правила эксплуатации</strong><small>Содержание готовится</small></div>
+          <div class="document-card reveal"><span>04</span><strong>Гарантийный талон</strong><small>Содержание готовится</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta" id="request-bottom">
+      <div class="container final-cta-layout">
+        <div class="final-cta-copy reveal"><p class="eyebrow">Начнём с разговора</p><h2>Расскажите, какую баню вы представляете</h2><p>Подберём модель, объясним различия и подготовим расчёт. Без навязчивых звонков и скрытых условий.</p></div>
+        <form class="lead-form lead-form-inline reveal" data-lead-form>
+          <label><span>Ваше имя</span><input type="text" name="name" autocomplete="name" maxlength="80" placeholder="Ваше имя" required></label>
+          <label><span>Телефон</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="+7 999 000-00-00" required></label>
+          <label class="honeypot" aria-hidden="true">Сайт<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          <label class="consent"><input type="checkbox" name="consent" required><span>Согласен с <a href="privacy.html" target="_blank">политикой обработки данных</a></span></label>
+          <button class="button button-full" type="submit">Оставить заявку</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="container contacts-layout">
+        <div class="contacts-info reveal">
+          <p class="eyebrow">Выставочная площадка</p>
+          <h2>Лучше любых фотографий</h2>
+          <p>Приезжайте посмотреть бани вживую, потрогать брус и посидеть в парной.</p>
+          <address>Владимирская область,<br>Александровский муниципальный округ,<br>деревня Машково, 1</address>
+          <dl class="contact-list">
+            <div><dt>Телефон</dt><dd><a href="tel:+79157750909">+7 915 775-09-09</a></dd></div>
+            <div><dt>Режим работы</dt><dd>Пн–Вс, 10:00–17:00</dd></div>
+            <div><dt>Написать</dt><dd><a href="https://web.max.ru/40925006" target="_blank" rel="noopener">MAX</a></dd></div>
+          </dl>
+          <div class="social-links" aria-label="Социальные сети">
+            <a href="https://vk.ru/bani.premium" target="_blank" rel="noopener">VK</a>
+            <a href="https://www.youtube.com/@%D0%B1%D0%B0%D0%BD%D0%B8.%D0%BF%D1%80%D0%B5%D0%BC%D0%B8%D1%83%D0%BC" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.tiktok.com/@bani.premium?lang=en" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://www.instagram.com/bani.premium/" target="_blank" rel="noopener">Instagram*</a>
+          </div>
+          <small class="platform-note">*Социальная сеть принадлежит компании Meta, деятельность которой признана экстремистской и запрещена на территории РФ.</small>
+        </div>
+        <div class="map-frame reveal">
+          <iframe src="https://yandex.ru/map-widget/v1/?text=%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%20%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BC%D1%83%D0%BD%D0%B8%D1%86%D0%B8%D0%BF%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BA%D1%80%D1%83%D0%B3%2C%20%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F%20%D0%9C%D0%B0%D1%88%D0%BA%D0%BE%D0%B2%D0%BE%2C%201&z=15" title="Карта выставочной площадки Бани-бочки Премиум" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><img src="assets/logo.png" alt="Бани-бочки Премиум" width="240" height="78"><p>Производство премиальных бань-бочек в Александрове.</p></div>
+      <div><strong>Разделы</strong><a href="#catalog">Модели и цены</a><a href="#advantages">Преимущества</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></div>
+      <div><strong>Информация</strong><a href="privacy.html">Политика конфиденциальности</a><a href="#documents">Документы</a><span>© <span data-year></span> Бани-бочки Премиум</span></div>
+    </div>
+  </footer>
+
+  <a class="mobile-cta" href="#request-bottom">Рассчитать баню</a>
+  <dialog class="lightbox" aria-label="Просмотр фотографии"><button type="button" aria-label="Закрыть">×</button><img src="" alt="Увеличенное изображение бани"></dialog>
+  <script src="script.js" defer></script>
 </body>
 </html>

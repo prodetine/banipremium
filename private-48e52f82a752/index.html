@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Управление заявками</title>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main>
+    <section class="login-screen" id="login-screen" aria-labelledby="login-title">
+      <div class="login-card">
+        <span class="kicker">Закрытый раздел</span>
+        <h1 id="login-title">Управление заявками</h1>
+        <p>Введите данные администратора.</p>
+        <form id="login-form">
+          <label><span>Логин</span><input type="text" name="username" autocomplete="username" required></label>
+          <label><span>Пароль</span><input type="password" name="password" autocomplete="current-password" required></label>
+          <button type="submit">Войти</button>
+          <p class="message" id="login-message" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="dashboard" id="dashboard" hidden>
+      <header class="dashboard-header">
+        <div><span class="kicker">Бани-бочки Премиум</span><h1>Заявки</h1></div>
+        <div class="header-actions"><button class="secondary" id="refresh-button" type="button">Обновить</button><button class="secondary" id="logout-button" type="button">Выйти</button></div>
+      </header>
+
+      <div class="stats" aria-label="Статистика заявок">
+        <div><span>Всего</span><strong id="stat-total">0</strong></div>
+        <div><span>Новые</span><strong id="stat-new">0</strong></div>
+        <div><span>В работе</span><strong id="stat-progress">0</strong></div>
+        <div><span>Завершены</span><strong id="stat-done">0</strong></div>
+      </div>
+
+      <div class="toolbar">
+        <input type="search" id="search-input" placeholder="Поиск по имени или телефону" aria-label="Поиск по заявкам">
+        <select id="status-filter" aria-label="Фильтр по статусу">
+          <option value="all">Все статусы</option>
+          <option value="new">Новые</option>
+          <option value="progress">В работе</option>
+          <option value="done">Завершённые</option>
+        </select>
+        <button class="secondary" id="export-button" type="button">Выгрузить CSV</button>
+      </div>
+
+      <p class="dashboard-message" id="dashboard-message" role="status"></p>
+      <div class="leads-list" id="leads-list"></div>
+      <div class="empty-state" id="empty-state" hidden><strong>Заявок пока нет</strong><span>Новые обращения появятся здесь автоматически.</span></div>
+    </section>
+  </main>
+
+  <template id="lead-template">
+    <article class="lead-card">
+      <div class="lead-head">
+        <div><strong class="lead-name"></strong><a class="lead-phone" href=""></a></div>
+        <time class="lead-time"></time>
+      </div>
+      <div class="lead-controls">
+        <label><span>Статус</span><select class="lead-status"><option value="new">Новая</option><option value="progress">В работе</option><option value="done">Завершена</option></select></label>
+        <label class="notes-label"><span>Заметки</span><textarea class="lead-notes" rows="3" maxlength="2000" placeholder="Результат звонка, договорённости…"></textarea></label>
+      </div>
+      <div class="lead-actions"><button class="save-button" type="button">Сохранить</button><button class="delete-button" type="button">Удалить</button></div>
+    </article>
+  </template>
+  <script src="admin.js" defer></script>
+</body>
+</html>

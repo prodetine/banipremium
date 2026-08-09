@@ -1,0 +1,14 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; frame-src https://www.youtube-nocookie.com https://yandex.ru; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+
+/private-48e52f82a752/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+  Cache-Control: no-store, private
+
+/api/admin/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store, private
