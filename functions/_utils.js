@@ -25,14 +25,10 @@ export const ensureSchema = async (db) => {
 };
 
 const bytesToHex = (bytes) => Array.from(bytes).map((byte) => byte.toString(16).padStart(2, '0')).join('');
-const hexToBytes = (hex) => Uint8Array.from(hex.match(/.{1,2}/g)?.map((byte) => parseInt(byte, 16)) || []);
-
-export const verifyPassword = async (password, specification) => {
-  const [type, iterationsRaw, saltHex, expectedHex] = String(specification || '').split('$');
-  if (type !== 'pbkdf2' || !iterationsRaw || !saltHex || !expectedHex) return false;
-  const key = await crypto.subtle.importKey('raw', encoder.encode(String(password)), 'PBKDF2', false, ['deriveBits']);
-  const derived = new Uint8Array(await crypto.subtle.deriveBits({ name: 'PBKDF2', hash: 'SHA-256', salt: hexToBytes(saltHex), iterations: Number(iterationsRaw) }, key, 256));
-  const actual = bytesToHex(derived);
+export const verifyPassword = async (password, expectedHex, secret) => {
+  if (!/^[a-f0-9]{64}$/i.test(String(expectedHex || '')) || !secret) return false;
+  const key = await crypto.subtle.importKey('raw', encoder.encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+  const actual = bytesToHex(new Uint8Array(await crypto.subtle.sign('HMAC', key, encoder.encode(String(password)))));
   if (actual.length !== expectedHex.length) return false;
   let difference = 0;
   for (let index = 0; index < actual.length; index += 1) difference |= actual.charCodeAt(index) ^ expectedHex.charCodeAt(index);

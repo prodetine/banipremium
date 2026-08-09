@@ -13,7 +13,7 @@ export async function onRequestPost(context) {
   let body;
   try { body = await context.request.json(); } catch { return json({ error: 'Неверные данные' }, 400); }
   const usernameOk = String(body.username || '') === ADMIN_USERNAME;
-  const passwordOk = await verifyPassword(String(body.password || ''), ADMIN_PASSWORD_HASH);
+  const passwordOk = await verifyPassword(String(body.password || ''), ADMIN_PASSWORD_HASH, SESSION_SECRET);
 
   if (!usernameOk || !passwordOk) {
     const recent = attempt && now - Number(attempt.updated_at) < 15 * 60 * 1000;
