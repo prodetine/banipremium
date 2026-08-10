@@ -345,7 +345,6 @@ button { color: inherit; }
   .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 250px; }
   .gallery-item-large { grid-column: auto; grid-row: span 1; }
   .review-card { min-height: 390px; }
-  .reviews-track { grid-template-columns: repeat(4, 87vw); }
   .document-grid { grid-template-columns: 1fr; }
   .document-card { min-height: 170px; }
   .contacts { padding-top: 85px; }
@@ -354,4 +353,10 @@ button { color: inherit; }
   .map-frame, .map-frame iframe { min-height: 360px; }
   .footer-grid, .footer-grid > div:first-child { grid-template-columns: 1fr; grid-column: auto; }
   .mobile-cta { position: fixed; z-index: 90; inset: auto 10px 10px; display: flex; min-height: 50px; align-items: center; justify-content: center; border-radius: 999px; background: var(--copper); color: var(--white); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; box-shadow: 0 14px 35px rgba(28,33,29,.28); }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .reviews { overflow: visible; }
+  .reviews-track { grid-template-columns: 1fr; overflow: visible; scroll-snap-type: none; padding-bottom: 0; touch-action: pan-y; }
+  .review-card { min-height: auto; scroll-snap-align: none; }
 }
