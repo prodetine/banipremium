@@ -193,11 +193,11 @@ button { color: inherit; }
 .review-card small { margin-top: 4px; color: var(--ink-soft); }
 
 .video-section { background: var(--forest-deep); color: var(--white); }
-.video-layout { display: grid; grid-template-columns: .65fr 1.35fr; gap: 80px; align-items: center; }
+.video-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 440px); gap: 80px; align-items: center; }
 .video-copy p:not(.eyebrow) { color: rgba(255,255,255,.62); }
 .video-copy .text-link { display: inline-block; margin-top: 20px; color: var(--copper-bright); }
-.video-frame { position: relative; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius); box-shadow: 0 30px 80px rgba(0,0,0,.32); }
-.video-frame iframe { width: 100%; height: 100%; border: 0; }
+.video-frame { position: relative; width: 100%; max-width: 440px; margin-left: auto; overflow: hidden; border-radius: var(--radius); background: #0d1712; box-shadow: 0 30px 80px rgba(0,0,0,.32); }
+.video-frame video { display: block; width: 100%; aspect-ratio: 9/16; object-fit: cover; background: #0d1712; }
 
 .faq { background: var(--paper); }
 .faq-layout { display: grid; grid-template-columns: .65fr 1.35fr; gap: 100px; }
@@ -304,6 +304,7 @@ button { color: inherit; }
   .section-heading { grid-template-columns: 1fr; gap: 22px; margin-bottom: 38px; }
   .section-heading h2, .advantages h2, .faq h2, .video-section h2, .final-cta h2, .contacts h2 { font-size: 46px; }
   .advantages-layout, .faq-layout, .video-layout, .final-cta-layout, .contacts-layout { grid-template-columns: 1fr; gap: 45px; }
+  .video-frame { margin-inline: auto; }
   .advantages-intro, .faq-intro { position: static; }
   .catalog-grid { grid-template-columns: 1fr; }
   .model-card, .model-card-wide { grid-column: auto; height: 450px; }
