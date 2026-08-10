@@ -213,7 +213,8 @@ button { color: inherit; }
 
 .documents { background: #ddd2c1; }
 .document-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-.document-card { min-height: 210px; display: flex; flex-direction: column; padding: 28px; border: 1px solid rgba(33,50,41,.18); border-radius: 18px; background: rgba(246,241,232,.45); }
+.document-card { min-height: 210px; display: flex; flex-direction: column; padding: 28px; border: 1px solid rgba(33,50,41,.18); border-radius: 18px; background: rgba(246,241,232,.45); transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+.document-card:hover { transform: translateY(-3px); border-color: rgba(182,110,56,.55); background: rgba(246,241,232,.72); }
 .document-card span { color: var(--copper); font-family: var(--serif); }
 .document-card strong { margin-top: auto; font-family: var(--serif); font-size: 24px; font-weight: 400; }
 .document-card small { margin-top: 6px; color: var(--ink-soft); }
@@ -282,11 +283,13 @@ button { color: inherit; }
   .container { width: min(100% - 28px, 680px); }
   .site-header { background: rgba(24,40,32,.88); backdrop-filter: blur(18px); }
   .site-header.scrolled { background: rgba(246,241,232,.95); }
+  .menu-open .site-header,
+  .menu-open .site-header.scrolled { height: 100dvh; background: #f6f1e8; color: var(--ink); backdrop-filter: none; }
   .header-inner { min-height: 70px; gap: 14px; }
   .brand { width: 165px; }
   .brand img { height: 55px; }
   .menu-toggle { display: block; padding: 9px 11px; border: 1px solid currentColor; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
-  .main-nav { position: fixed; inset: 70px 0 0; display: flex; flex-direction: column; align-items: flex-start; gap: 0; padding: 35px 22px; background: var(--paper-soft); color: var(--ink); transform: translateX(100%); transition: transform .3s ease; }
+  .main-nav { position: absolute; z-index: 2; top: 70px; right: 0; bottom: auto; left: 0; height: calc(100dvh - 70px); display: flex; flex-direction: column; align-items: flex-start; gap: 0; padding: 35px 22px; overflow-y: auto; background: #f6f1e8; color: var(--ink); opacity: 1; transform: translateX(100%); transition: transform .3s ease; }
   .menu-open .main-nav { transform: none; }
   .main-nav a { width: 100%; padding: 18px 0; border-bottom: 1px solid var(--line); font-family: var(--serif); font-size: 28px; font-weight: 400; letter-spacing: 0; text-transform: none; }
   .header-actions .phone-link { display: none; }
