@@ -18,6 +18,16 @@ navLinks.forEach((link) => link.addEventListener('click', () => {
   if (menuToggle) menuToggle.textContent = 'Меню';
 }));
 
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape' || !document.body.classList.contains('menu-open')) return;
+  document.body.classList.remove('menu-open');
+  menuToggle?.setAttribute('aria-expanded', 'false');
+  if (menuToggle) {
+    menuToggle.textContent = 'Меню';
+    menuToggle.focus();
+  }
+});
+
 document.querySelectorAll('[data-year]').forEach((node) => {
   node.textContent = new Date().getFullYear();
 });
@@ -60,6 +70,7 @@ document.querySelectorAll('[data-lead-form]').forEach((form) => {
     event.preventDefault();
     const status = form.querySelector('.form-status');
     const submit = form.querySelector('button[type="submit"]');
+    const originalSubmitText = submit.textContent;
     const data = new FormData(form);
     const name = String(data.get('name') || '').trim();
     const phone = normalizePhone(String(data.get('phone') || '').trim());
@@ -95,7 +106,7 @@ document.querySelectorAll('[data-lead-form]').forEach((form) => {
       status.classList.add('error');
     } finally {
       submit.disabled = false;
-      submit.textContent = form.closest('.hero-card') ? 'Получить консультацию' : 'Оставить заявку';
+      submit.textContent = originalSubmitText;
     }
   });
 });
