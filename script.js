@@ -53,21 +53,6 @@ document.querySelectorAll('.reveal').forEach((element) => {
   else element.classList.add('visible');
 });
 
-const lightbox = document.querySelector('.lightbox');
-const lightboxImage = lightbox?.querySelector('img');
-document.querySelectorAll('[data-lightbox]').forEach((button) => {
-  button.addEventListener('click', () => {
-    if (!lightbox || !lightboxImage) return;
-    lightboxImage.src = button.dataset.lightbox;
-    lightboxImage.alt = button.querySelector('img')?.alt || 'Фотография бани';
-    lightbox.showModal();
-  });
-});
-lightbox?.querySelector('button')?.addEventListener('click', () => lightbox.close());
-lightbox?.addEventListener('click', (event) => {
-  if (event.target === lightbox) lightbox.close();
-});
-
 const normalizePhone = (value) => value.replace(/[^0-9+]/g, '');
 
 document.querySelectorAll('[data-lead-form]').forEach((form) => {
