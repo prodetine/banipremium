@@ -1,1 +1,1 @@
-Manrope and Oswald. Source: Google Fonts. SIL Open Font License 1.1. Font files are self-hosted; no browser request to Google Fonts is needed.
+Active fonts: Switzer (TRW heading family; Latin only) from Fontshare, with Inter Cyrillic companion from Google Fonts. Inter: SIL OFL 1.1. Switzer: ITF Free Font License. Fonts self-hosted; no external font requests. Previously used Manrope and Oswald files retained for historical compatibility.

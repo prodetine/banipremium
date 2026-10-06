@@ -2,9 +2,15 @@ const header = document.querySelector('.site-header');
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelectorAll('.main-nav a');
 
-const updateHeader = () => header?.classList.toggle('scrolled', window.scrollY > 30);
+const hero = document.querySelector('.hero');
+const updateHeader = () => {
+  const heroInView = hero ? hero.getBoundingClientRect().bottom > 100 : false;
+  header?.classList.toggle('scrolled', window.scrollY > 30);
+  document.body.classList.toggle('hero-in-view', heroInView);
+};
 updateHeader();
 window.addEventListener('scroll', updateHeader, { passive: true });
+window.addEventListener('resize', updateHeader, { passive: true });
 
 menuToggle?.addEventListener('click', () => {
   const open = document.body.classList.toggle('menu-open');
