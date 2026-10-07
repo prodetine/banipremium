@@ -13,8 +13,8 @@
   <meta property="og:image" content="https://banizhochki.pages.dev/assets/viking.jpg">
   <link rel="icon" href="assets/logo-transparent.png" type="image/png">
   <link rel="preload" href="assets/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/fonts/fonts.css?v=20261007c">
-  <link rel="stylesheet" href="styles-trw.css?v=20261007c">
+  <link rel="stylesheet" href="assets/fonts/fonts.css?v=20261007d">
+  <link rel="stylesheet" href="styles-trw.css?v=20261007d">
 </head>
 <body>
 <a class="skip-link" href="#main">К содержанию</a>
@@ -142,12 +142,25 @@
             <div class="model-overlay"><span class="model-number">07</span><div><h3>На прицепе</h3><p>Мобильная баня для новых маршрутов</p></div><strong>от 350 000 ₽</strong><a class="button model-request" href="#request-bottom">Рассчитать эту модель</a></div>
           </article>
         </div>
-        <div class="catalog-note">
-
-          <a class="button" href="#request-bottom">Получить расчёт модели</a>
-        </div>
       </div>
     </section>
+<section class="section location-map" id="location" aria-label="Наше расположение"><div class="container">
+  <div class="map-frame"><iframe src="https://yandex.ru/map-widget/v1/?z=12&amp;ol=biz&amp;oid=204091798363" width="560" height="400" frameborder="0" title="Бани-бочки Премиум — маркер на карте Яндекса" loading="lazy" allowfullscreen></iframe></div>
+</div></section>
+<section class="section final-cta" id="request-bottom"><div class="container final-cta-layout">
+  <div class="final-cta-copy"><h2>ЗАПИШИСЬ<br><em>НА КОНСУЛЬТАЦИЮ.</em></h2><p>Оставь имя и телефон. На бесплатной консультации подберём модель под твой участок, обсудим комплектацию и подготовим точный расчёт.</p>
+    <div class="form-promises"><span>Бесплатная консультация</span><span>Цена и срок в договоре</span></div>
+    <a class="request-phone" href="tel:+79157750909">+7 915 775-09-09</a><p class="request-hours">Каждый день, 10:00–17:00</p>
+  </div>
+  <div class="request-card" id="request"><form class="lead-form lead-form-inline" data-lead-form>
+          <label><span>Ваше имя</span><input type="text" name="name" autocomplete="name" maxlength="80" placeholder="Ваше имя" required></label>
+          <label><span>Телефон</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="+7 999 000-00-00" required></label>
+          <label class="honeypot" aria-hidden="true">Сайт<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          <label class="consent"><input type="checkbox" name="consent" required><span>Даю <a href="consent.html" target="_blank">согласие на обработку данных</a>. <a href="privacy.html" target="_blank">Политика</a></span></label>
+          <button class="button button-full" type="submit">Записаться на консультацию</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form></div>
+</div></section>
 <section class="section advantages" id="advantages">
       <div class="container advantages-layout">
         <div class="advantages-intro">
@@ -182,20 +195,6 @@
   <div class="section-heading"><div><h2>ВСЁ ДЛЯ<br><em>ПЕРВОЙ РАСТОПКИ.</em></h2></div><p>Печь, электрика, вентиляция и защитная обработка — посмотри, что входит в комплектацию твоей бани.</p></div>
   <a class="equipment-link" href="equipment.html"><span>Посмотреть комплектацию</span><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
 </div></section>
-<section class="section final-cta" id="request-bottom"><div class="container final-cta-layout">
-  <div class="final-cta-copy"><h2>ЗАПИШИСЬ<br><em>НА КОНСУЛЬТАЦИЮ.</em></h2><p>Оставь имя и телефон. На бесплатной консультации подберём модель под твой участок, обсудим комплектацию и подготовим точный расчёт.</p>
-    <div class="form-promises"><span>Бесплатная консультация</span><span>Цена и срок в договоре</span></div>
-    <a class="request-phone" href="tel:+79157750909">+7 915 775-09-09</a><p class="request-hours">Каждый день, 10:00–17:00</p>
-  </div>
-  <div class="request-card" id="request"><form class="lead-form lead-form-inline" data-lead-form>
-          <label><span>Ваше имя</span><input type="text" name="name" autocomplete="name" maxlength="80" placeholder="Ваше имя" required></label>
-          <label><span>Телефон</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="+7 999 000-00-00" required></label>
-          <label class="honeypot" aria-hidden="true">Сайт<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-          <label class="consent"><input type="checkbox" name="consent" required><span>Даю <a href="consent.html" target="_blank">согласие на обработку данных</a>. <a href="privacy.html" target="_blank">Политика</a></span></label>
-          <button class="button button-full" type="submit">Записаться на консультацию</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form></div>
-</div></section>
 <section class="contacts" id="contacts">
       <div class="container contacts-layout">
         <div class="contacts-info">
@@ -214,10 +213,6 @@
             <a href="https://www.instagram.com/bani.premium/" target="_blank" rel="noopener">Instagram*</a>
           </div>
           <small class="platform-note">*Социальная сеть принадлежит компании Meta, деятельность которой признана экстремистской и запрещена на территории РФ.</small>
-        </div>
-        <div class="map-frame">
-          <div class="map-fallback"><strong>Выставочная площадка</strong><p>Деревня Машково, 1<br>Александровский муниципальный округ</p><a class="text-link" href="https://yandex.ru/maps/?text=Владимирская%20область%2C%20деревня%20Машково%2C%201" target="_blank" rel="noopener">Открыть в Яндекс Картах <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
-          <iframe src="https://yandex.ru/map-widget/v1/?text=%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%20%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BC%D1%83%D0%BD%D0%B8%D1%86%D0%B8%D0%BF%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BA%D1%80%D1%83%D0%B3%2C%20%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F%20%D0%9C%D0%B0%D1%88%D0%BA%D0%BE%D0%B2%D0%BE%2C%201&z=15" title="Карта выставочной площадки Бани-бочки Премиум" loading="lazy" allowfullscreen></iframe>
         </div>
       </div>
     </section>
@@ -252,5 +247,5 @@
     </div>
   </footer></main>
 <a class="mobile-cta" href="#request-bottom">Записаться на консультацию</a>
-<script src="script.js?v=20261007c" defer></script>
+<script src="script.js?v=20261007d" defer></script>
 </body></html>
