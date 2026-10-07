@@ -73,6 +73,12 @@ document.querySelectorAll('[data-lead-form]').forEach((form) => {
       return;
     }
 
+    if (location.hostname.endsWith('github.io')) {
+      status.textContent = 'Запись через форму пока недоступна. Позвоните нам: +7 915 775-09-09.';
+      status.classList.add('error');
+      return;
+    }
+
     submit.disabled = true;
     submit.textContent = 'Отправляем…';
     try {
@@ -101,3 +107,37 @@ document.querySelectorAll('[data-lead-form]').forEach((form) => {
     }
   });
 });
+
+const reviewTrack = document.querySelector('.reviews-track');
+if (reviewTrack) {
+  const cards = [...reviewTrack.querySelectorAll('.review-card')];
+  const previous = document.querySelector('.review-prev');
+  const next = document.querySelector('.review-next');
+  const position = document.querySelector('.review-position');
+  const phoneLayout = matchMedia('(max-width: 500px)');
+  let current = 0;
+  const updateReviews = () => {
+    if (!phoneLayout.matches) { reviewTrack.style.height = ''; return; }
+    current = cards.reduce((closest, card, index) => Math.abs(card.offsetLeft - cards[0].offsetLeft - reviewTrack.scrollLeft) < Math.abs(cards[closest].offsetLeft - cards[0].offsetLeft - reviewTrack.scrollLeft) ? index : closest, 0);
+    reviewTrack.style.height = `${cards[current].offsetHeight}px`;
+    previous.disabled = current === 0;
+    next.disabled = current === cards.length - 1;
+    position.textContent = `${current + 1} из ${cards.length}`;
+  };
+  const goToReview = (index) => {
+    if (!phoneLayout.matches) return;
+    const target = Math.max(0, Math.min(cards.length - 1, index));
+    reviewTrack.scrollTo({left: cards[target].offsetLeft - cards[0].offsetLeft, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+  };
+  previous.addEventListener('click', () => goToReview(current - 1));
+  next.addEventListener('click', () => goToReview(current + 1));
+  reviewTrack.addEventListener('scroll', updateReviews, {passive: true});
+  reviewTrack.addEventListener('keydown', (event) => {
+    if (!phoneLayout.matches || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    event.preventDefault();
+    goToReview(current + (event.key === 'ArrowRight' ? 1 : -1));
+  });
+  window.addEventListener('resize', updateReviews);
+  document.fonts.ready.then(updateReviews);
+  updateReviews();
+}
