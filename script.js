@@ -117,9 +117,8 @@ if (reviewTrack) {
   const phoneLayout = matchMedia('(max-width: 500px)');
   let current = 0;
   const updateReviews = () => {
-    if (!phoneLayout.matches) { reviewTrack.style.height = ''; return; }
+    if (!phoneLayout.matches) return;
     current = cards.reduce((closest, card, index) => Math.abs(card.offsetLeft - cards[0].offsetLeft - reviewTrack.scrollLeft) < Math.abs(cards[closest].offsetLeft - cards[0].offsetLeft - reviewTrack.scrollLeft) ? index : closest, 0);
-    reviewTrack.style.height = `${cards[current].offsetHeight}px`;
     previous.disabled = current === 0;
     next.disabled = current === cards.length - 1;
     position.textContent = `${current + 1} из ${cards.length}`;
