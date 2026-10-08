@@ -27,7 +27,7 @@ em{color:var(--gold);font-style:normal}p{color:var(--muted)}
 .header-inner{display:flex;min-height:82px;align-items:center;justify-content:space-between;gap:24px}
 .brand{width:180px;flex-shrink:0}.main-nav{display:flex;align-items:center;gap:25px}
 .main-nav a{color:#c4cad3;font-size:17px;font-weight:600;transition:color .2s}.main-nav a:hover{color:var(--gold)}
-.header-phone{font-size:17px;font-weight:700;white-space:nowrap}.menu-toggle{display:none}
+.header-phone{font-size:17px;font-weight:700;white-space:nowrap;color:#ffdf83;text-shadow:0 0 18px #efba4d66,0 0 38px #c58a2526}.header-phone:hover{color:#fff0b8}.menu-toggle{display:none}
 .hero{position:relative;isolation:isolate;overflow:clip;padding:100px 0 40px}
 .hero-backdrop{position:absolute;inset:0;z-index:-2;background:url('assets/viking.jpg') center 43%/cover no-repeat;filter:saturate(.35) brightness(.48)}
 .hero::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#070e17ad 0%,#070e17d4 65%,var(--bg) 100%)}
