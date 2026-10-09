@@ -215,3 +215,11 @@ main>.section:not(.choice),main>.contacts{background:transparent}.advantage-list
 @media(max-width:360px){.journey-row{grid-template-columns:80px minmax(0,1fr);gap:12px}.journey-copy h3{font-size:18px}.journey-row>img{height:100px}}
 .frame-projects{padding-top:12px}.frame-projects .center-heading{margin-bottom:32px}.frame-projects-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.frame-project{display:flex;flex-direction:column;overflow:hidden;background:#101b25ed;border:1px solid #344654;border-radius:3px}.frame-project>img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#101b25}.frame-project .button{min-height:58px;font-size:18px;margin:16px;padding:12px 14px;flex:1}.journey-row>img{object-fit:contain;background:#101b25}
 @media(max-width:760px){.frame-projects-grid{grid-template-columns:1fr;gap:18px}.frame-project>img{aspect-ratio:auto;height:auto}.frame-project .button{flex:none;font-size:16px;min-height:54px}.frame-projects{padding-top:10px}}
+
+/* Compact equipment entry directly beneath the frame project gallery. */
+.frame-projects .equipment-teaser{margin-top:26px;background:transparent;text-align:left;scroll-margin-top:110px}
+.frame-projects .equipment-link{max-width:none;padding:22px 4px;font-size:22px;line-height:1.3}
+.frame-projects .equipment-link strong{display:block;color:var(--white);font-weight:700}
+.frame-projects .equipment-link small{display:block;margin-top:7px;color:var(--muted);font-size:16px;font-weight:400}
+.frame-projects .equipment-link:hover strong{color:var(--gold)}
+@media(max-width:760px){.frame-projects .equipment-teaser{margin-top:22px}.frame-projects .equipment-link{padding:20px 0;gap:16px;font-size:20px}.frame-projects .equipment-link small{font-size:15px}}
