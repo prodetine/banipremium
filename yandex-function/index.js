@@ -1,3 +1,5 @@
+const { deliver } = require('./transport');
+
 const json = (statusCode, data, origin) => ({
   statusCode,
   headers: {
@@ -37,6 +39,9 @@ module.exports.handler = async (event) => {
       : event.body || '';
     if (body.length > 3000) return json(413, { error: 'Request too large' }, origin);
     data = JSON.parse(body);
+    if (!data || typeof data !== 'object' || Array.isArray(data)) {
+      return json(400, { error: 'Invalid request' }, origin);
+    }
   } catch {
     return json(400, { error: 'Invalid request' }, origin);
   }
@@ -46,26 +51,20 @@ module.exports.handler = async (event) => {
   const digits = phone.replace(/\D/g, '');
   if (data.website) return json(200, { ok: true }, origin);
   if (name.length < 2 || name.length > 80 || digits.length < 10 || digits.length > 15 ||
-      data.consent !== true || Number(data.elapsed) < 500) {
+      data.consent !== true || (!Number.isFinite(Number(data.elapsed)) || Number(data.elapsed) < 500)) {
     return json(400, { error: 'Проверьте имя, телефон и согласие.' }, origin);
   }
 
-  const token = process.env.TELEGRAM_BOT_TOKEN;
-  const chatId = process.env.TELEGRAM_CHAT_ID;
-  if (!token || !chatId) return json(503, { error: 'Сервис временно недоступен' }, origin);
+  const relayUrl = process.env.TELEGRAM_RELAY_URL;
+  const relayKey = process.env.TELEGRAM_RELAY_KEY;
+  if (!relayUrl || !relayKey) return json(503, { error: 'Сервис временно недоступен' }, origin);
 
-  const text = `Новая заявка с сайта «Бани-бочки Премиум»\nИмя: ${name}\nТелефон: ${phone}`;
   try {
-    const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: chatId, text }),
-      signal: AbortSignal.timeout(10000)
-    });
-    const result = await response.json();
-    if (!response.ok || !result.ok) throw new Error('Telegram delivery failed');
+    await deliver(relayUrl, relayKey, { name, phone, consent: true });
     return json(200, { ok: true }, origin);
-  } catch {
+  } catch (error) {
+    // Never log request bodies or credentials.
+    console.error('Telegram delivery error', error.name, error.code || error.cause?.code || '');
     return json(502, { error: 'Не удалось отправить заявку' }, origin);
   }
 };
