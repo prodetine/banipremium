@@ -54,6 +54,7 @@ document.querySelectorAll('.reveal').forEach((element) => {
 });
 
 const normalizePhone = (value) => value.replace(/[^0-9+]/g, '');
+const leadEndpoint = 'https://functions.yandexcloud.net/d4e7krvllu4d6glh521n';
 
 document.querySelectorAll('[data-lead-form]').forEach((form) => {
   const startedAt = Date.now();
@@ -73,21 +74,16 @@ document.querySelectorAll('[data-lead-form]').forEach((form) => {
       return;
     }
 
-    if (location.hostname.endsWith('github.io')) {
-      status.textContent = 'Запись через форму пока недоступна. Позвоните нам: +7 915 775-09-09.';
-      status.classList.add('error');
-      return;
-    }
-
     submit.disabled = true;
     submit.textContent = 'Отправляем…';
     try {
-      const response = await fetch('/api/lead', {
+      const response = await fetch(leadEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name,
           phone,
+          consent: data.get('consent') === 'on',
           website: String(data.get('website') || ''),
           elapsed: Date.now() - startedAt,
           page: window.location.pathname
