@@ -68,6 +68,7 @@ document.querySelectorAll('[data-lead-form]').forEach((form) => {
     const phone = normalizePhone(String(data.get('phone') || '').trim());
 
     status.className = 'form-status';
+    status.textContent = '';
     if (name.length < 2 || phone.replace(/\D/g, '').length < 10) {
       status.textContent = 'Проверьте имя и номер телефона.';
       status.classList.add('error');

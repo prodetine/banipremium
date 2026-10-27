@@ -5,4 +5,4 @@ The public form calls Yandex Cloud Functions. Validated contact data is sent ove
 Yandex environment: ALLOWED_ORIGINS, TELEGRAM_RELAY_URL, TELEGRAM_RELAY_KEY.
 Cloudflare production secrets: TELEGRAM_RELAY_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID.
 
-Keep all secret values outside this repository. Deploy the Yandex ZIP containing index.js and transport.js with entry point index.handler, Node.js 22, 128 MB, 15 seconds. Changes under functions/ deploy through the existing Cloudflare Pages Git integration.
+Keep all secret values outside this repository. Deploy the Yandex ZIP containing index.js and transport.js with entry point index.handler, Node.js 22, 128 MB, 20 seconds. Changes under functions/ deploy through the existing Cloudflare Pages Git integration.
