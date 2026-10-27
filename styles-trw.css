@@ -302,3 +302,8 @@ body.quiz-open{overflow:hidden}
 @media(max-width:500px){.selection-button-wrap{display:block;padding-right:42px}.selection-arrow{left:auto;right:0;top:-4px;width:42px;height:48px}.hero-selection .selection-button-wrap .button{font-size:16px;padding-inline:10px}.quiz-page .phone-reassurance{font-size:12px}}
 @media(max-width:360px){.hero-selection .selection-button-wrap .button{font-size:14px}}
 @media(min-width:1100px){.hero-selection h1{position:relative;left:clamp(34px,4vw,76px)}}
+
+/* Let the photograph cover the whole hero, without opaque black edges. */
+.hero-selection .selection-photo{inset:0;width:100%;object-position:57% center}
+@media(min-width:761px){.hero-selection::after{background:linear-gradient(90deg,#07101999 0%,#07101970 42%,#07101924 100%),linear-gradient(0deg,#07101999 0%,#07101980 28%,transparent 60%)}.hero-selection .selection-benefits span{color:#e0e5ea;text-shadow:0 1px 5px #0009}}
+@media(max-width:760px){.hero-selection::after{background:#07101999}}
