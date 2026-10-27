@@ -1,6 +1,4 @@
 (() => {
-  const dialog = document.querySelector('#quiz');
-  if (!dialog) return;
   // Replace these four entries when the final questions are approved.
   const questions = [
     { title: 'Какую баню вы рассматриваете?', options: ['Баню-бочку', 'Каркасную баню', 'Пока выбираю — нужна помощь'] },
@@ -17,9 +15,13 @@
     else localStorage.setItem('banipremium-gift-deadline-v1', String(deadline));
     submitted = localStorage.getItem('banipremium-gift-submitted-v1') === 'yes';
   } catch { /* The form remains usable when browser storage is disabled. */ }
+  const dialog = document.querySelector('#quiz');
+  if (!dialog) {
+    if (location.hash === '#quiz') location.replace('quiz.html');
+    return;
+  }
   const answers = Array(questions.length).fill(null);
   let step = 0;
-  let opener;
   const heading = dialog.querySelector('#quiz-heading');
   const fieldset = dialog.querySelector('.quiz-options');
   const next = dialog.querySelector('.quiz-next');
@@ -77,18 +79,6 @@
     next.textContent = step === questions.length - 1 ? 'Посмотреть подарок' : 'Далее';
     if (focus) heading.focus();
   };
-  const open = event => {
-    event?.preventDefault(); opener = event?.currentTarget || document.activeElement;
-    document.body.classList.remove('menu-open');
-    document.querySelector('.menu-toggle')?.setAttribute('aria-expanded','false');
-    const menuButton = document.querySelector('.menu-toggle'); if (menuButton) menuButton.textContent = 'Меню';
-    render(false); dialog.showModal(); document.body.classList.add('quiz-open');
-    (step === questions.length ? dialog.querySelector('#quiz-result-heading') : heading).focus();
-  };
-  document.querySelectorAll('[data-open-quiz]').forEach(link => link.addEventListener('click',open));
-  dialog.querySelector('.quiz-close').addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', event => { if (event.target === dialog) { const bounds = dialog.getBoundingClientRect(); if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close(); } });
-  dialog.addEventListener('close', () => { document.body.classList.remove('quiz-open'); opener?.focus(); if (location.hash === '#quiz') history.replaceState(null,'',location.pathname + location.search); });
   next.addEventListener('click', () => { if (answers[step] !== null) { step++; render(); } });
   back.addEventListener('click', () => { if (step > 0) { step--; render(); } });
   dialog.querySelector('.quiz-edit').addEventListener('click', () => { step = 0; render(); });
@@ -102,5 +92,5 @@
     }
   };
   tick(); setInterval(tick,1000);
-  if (location.hash === '#quiz') open();
+  render(false);
 })();

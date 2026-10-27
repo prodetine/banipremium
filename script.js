@@ -53,7 +53,7 @@ document.querySelectorAll('.reveal').forEach((element) => {
   else element.classList.add('visible');
 });
 
-const normalizePhone = (value) => value.replace(/[^0-9+]/g, '');
+const normalizePhone = normalizeLeadPhone;
 const leadEndpoint = 'https://functions.yandexcloud.net/d4e7krvllu4d6glh521n';
 
 document.querySelectorAll('[data-lead-form]').forEach((form) => {
