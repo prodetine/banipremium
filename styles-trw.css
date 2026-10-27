@@ -295,3 +295,9 @@ body.quiz-open{overflow:hidden}
 .hero.hero-selection::before{display:none}
 @media(min-width:761px){.hero-selection::after{background:linear-gradient(90deg,#070e17 0%,#070e17f0 22%,#070e17ba 40%,#070e171a 67%,transparent),linear-gradient(0deg,#070e17 0%,#070e17ed 23%,#070e1750 42%,transparent 60%),linear-gradient(180deg,#070e17a6,transparent 160px)}}
 @media(max-width:500px) and (max-height:700px){.quiz-page-header{min-height:72px;padding-block:12px}.quiz-page-main{padding-top:16px}.quiz-page .quiz-dialog h2{font-size:23px;margin-bottom:18px}.quiz-page .quiz-progress-caption{margin-bottom:18px}.quiz-page .quiz-options{gap:8px}.quiz-page .quiz-options label{min-height:50px;padding:11px 12px}.quiz-page .quiz-navigation{margin-top:18px}}
+
+.selection-button-wrap{position:relative;display:inline-block;max-width:100%}
+.selection-arrow{position:absolute;left:calc(100% + 12px);top:-10px;width:100px;height:64px;color:var(--gold);pointer-events:none}
+.quiz-page .phone-reassurance{font-size:13px;line-height:1.5;color:#c0cbd6;margin-top:-7px}
+@media(max-width:500px){.selection-button-wrap{display:block;padding-right:42px}.selection-arrow{left:auto;right:0;top:-4px;width:42px;height:48px}.hero-selection .selection-button-wrap .button{font-size:16px;padding-inline:10px}.quiz-page .phone-reassurance{font-size:12px}}
+@media(max-width:360px){.hero-selection .selection-button-wrap .button{font-size:14px}}
