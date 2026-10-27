@@ -55,12 +55,16 @@ module.exports.handler = async (event) => {
     return json(400, { error: 'Проверьте имя, телефон и согласие.' }, origin);
   }
 
+  const quiz = Array.isArray(data.quiz) ? data.quiz.slice(0, 4).map(item => ({ question: String(item?.question || '').slice(0, 120), answer: String(item?.answer || '').slice(0, 120) })) : [];
+  const giftDeadline = Date.parse(data.giftDeadline);
+  const giftRequested = data.giftRequested === true && giftDeadline > Date.now() && giftDeadline <= Date.now() + 86400000;
+
   const relayUrl = process.env.TELEGRAM_RELAY_URL;
   const relayKey = process.env.TELEGRAM_RELAY_KEY;
   if (!relayUrl || !relayKey) return json(503, { error: 'Сервис временно недоступен' }, origin);
 
   try {
-    await deliver(relayUrl, relayKey, { name, phone, consent: true });
+    await deliver(relayUrl, relayKey, { name, phone, consent: true, quiz, giftRequested });
     return json(200, { ok: true }, origin);
   } catch (error) {
     // Never log request bodies or credentials.

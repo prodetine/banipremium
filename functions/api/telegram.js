@@ -22,10 +22,12 @@ export async function onRequestPost({ request, env }) {
   if (name.length < 2 || name.length > 80 || digits.length < 10 || digits.length > 15 || data?.consent !== true) {
     return json({ error: 'Invalid contact data' }, 400);
   }
+  const quiz = Array.isArray(data.quiz) ? data.quiz.slice(0, 4).map(item => `${String(item?.question || '').slice(0, 120)}: ${String(item?.answer || '').slice(0, 120)}`).join('\n') : '';
+  const gift = data.giftRequested === true ? '\nПодарок при заказе: дровник «Сота» и подспинники в комнату отдыха.' : '';
   try {
     const response = await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: env.TELEGRAM_CHAT_ID, text: `Новая заявка с сайта «Бани-бочки Премиум»\nИмя: ${name}\nТелефон: ${phone}` }),
+      body: JSON.stringify({ chat_id: env.TELEGRAM_CHAT_ID, text: `Новая заявка с сайта «Бани-бочки Премиум»\nИмя: ${name}\nТелефон: ${phone}${quiz ? `\n\nОтветы на подбор:\n${quiz}` : ''}${gift}` }),
       signal: AbortSignal.timeout(7000)
     });
     const result = await response.json();

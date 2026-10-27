@@ -86,7 +86,8 @@ document.querySelectorAll('[data-lead-form]').forEach((form) => {
           consent: data.get('consent') === 'on',
           website: String(data.get('website') || ''),
           elapsed: Date.now() - startedAt,
-          page: window.location.pathname
+          page: window.location.pathname,
+          ...window.saunaQuiz?.getLeadDetails()
         })
       });
       const result = await response.json().catch(() => ({}));
@@ -94,6 +95,7 @@ document.querySelectorAll('[data-lead-form]').forEach((form) => {
       form.reset();
       status.textContent = 'Спасибо! Заявка принята. Мы свяжемся с вами в рабочее время.';
       status.classList.add('success');
+      if (form.closest('#quiz')) window.saunaQuiz?.markSubmitted();
     } catch (error) {
       status.textContent = 'Не получилось отправить заявку. Позвоните нам: +7 915 775-09-09.';
       status.classList.add('error');

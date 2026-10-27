@@ -14,7 +14,7 @@
   <link rel="icon" href="assets/logo-transparent.png" type="image/png">
   <link rel="preload" href="assets/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/fonts/fonts.css?v=20261007d">
-  <link rel="stylesheet" href="styles-trw.css?v=20261009b">
+  <link rel="stylesheet" href="styles-trw.css?v=20261027a">
 </head>
 <body>
 <a class="skip-link" href="#main">К содержанию</a>
@@ -22,17 +22,20 @@
   <a class="brand" href="#top" aria-label="Бани-бочки Премиум — на главную"><img src="assets/logo-transparent.png" alt="Бани-бочки Премиум" width="180" height="60"></a>
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Меню</button>
   <nav class="main-nav" id="main-nav" aria-label="Основная навигация"><a href="#benefits">Для тебя</a><a href="#catalog">Модели и цены</a><a href="#advantages">Качество</a><a href="#reviews">Отзывы</a><a href="#faq">Вопросы</a></nav>
-  <a class="header-phone" href="tel:+79157750909">+7 915 775-09-09</a>
+  <div class="header-contact"><span class="working-status"><i aria-hidden="true"></i>Сейчас работаем</span><a class="header-phone" href="tel:+79157750909">+7 915 775-09-09</a></div>
 </div></header>
 <main id="main">
-<section class="hero" aria-labelledby="hero-title">
-  <div class="hero-backdrop" aria-hidden="true"></div>
-  <div class="container hero-center">
-    <img class="hero-logo" src="assets/logo-transparent.png" width="2048" height="682" alt="Бани-бочки Премиум" fetchpriority="high">
-    <h1 id="hero-title">БАНИ-БОЧКИ ПРЕМИУМ</h1><p class="hero-lead">Производство в Александрове</p>
-    <div class="hero-picture"><img src="assets/hero-deluxe.jpg" alt="Панорамная баня Делюкс зимой на участке" width="4000" height="3000" fetchpriority="high"></div>
-    <a class="button hero-button" href="#request-bottom">ВЫБРАТЬ СВОЮ БАНЮ</a>
-    <a class="social-proof" href="#reviews"><span class="proof-stars" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.1 6.7 1-4.9 4.7 1.2 6.7-6-3.2-6 3.2 1.2-6.7L2.3 9.1l6.7-1L12 2Z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.1 6.7 1-4.9 4.7 1.2 6.7-6-3.2-6 3.2 1.2-6.7L2.3 9.1l6.7-1L12 2Z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.1 6.7 1-4.9 4.7 1.2 6.7-6-3.2-6 3.2 1.2-6.7L2.3 9.1l6.7-1L12 2Z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.1 6.7 1-4.9 4.7 1.2 6.7-6-3.2-6 3.2 1.2-6.7L2.3 9.1l6.7-1L12 2Z"/></svg><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.1 6.7 1-4.9 4.7 1.2 6.7-6-3.2-6 3.2 1.2-6.7L2.3 9.1l6.7-1L12 2Z"/></svg></span><span><strong>100+</strong> счастливых покупателей</span></a>
+<section class="hero hero-selection" aria-labelledby="hero-title">
+  <img class="selection-photo" src="assets/hero-deluxe.jpg" alt="" width="4000" height="3000" fetchpriority="high">
+  <div class="container selection-content">
+    <h1 id="hero-title">Парьтесь через месяц<br>в бане своей мечты.<br><em>Цены от 200.000 руб!</em></h1>
+    <ul class="selection-benefits">
+      <li><strong>Экономия до 60 000 ₽</strong><span>Своё производство в г. Александров — без посредников.</span></li>
+      <li><strong>Гарантия 1 год</strong><span>На конструкцию, кровлю и сборку. Приедем и устраним проблему.</span></li>
+      <li><strong>Премиум по выверенной цене</strong><span>Сравнили рынок и продумали комплектации: качество в каждой детали.</span></li>
+      <li><strong>Можно увидеть вживую</strong><span>Своя выставочная площадка: посмотрите бани и оцените качество сами.</span></li>
+    </ul>
+    <div class="selection-action"><a class="button" href="#quiz" data-open-quiz>Подобрать лучший вариант</a><p>4 вопроса — и подарок при заказе бани</p></div>
   </div>
 </section>
 <section class="section brand-intro" aria-labelledby="about-title"><div class="container">
@@ -41,7 +44,7 @@
   <p>Мы производим в Александрове <strong>бани-бочки, каркасные дома и бани любой сложности.</strong> Подберём решение под твой участок и пожелания.</p>
   <p>Продуманная комплектация, настоящая парная и <strong>отдых со своими</strong> — круглый год, без очередей и поездок.</p>
   <p>Модели <strong>от 200 000 ₽</strong>, изготовление <strong>от 3 недель</strong> и <strong>гарантия 1 год</strong>. Поможем выбрать баню под твой дом.</p>
-  <a class="button" href="#request-bottom">ВЫБРАТЬ СВОЮ БАНЮ</a>
+  <a class="button" href="#quiz" data-open-quiz>Подобрать баню для себя</a>
 </div></section>
 <section class="section journey" id="lifestyle"><div class="container">
   <h2 class="center-heading">ОТ ТВОЕГО РЕШЕНИЯ<br><em>ДО ПЕРВОГО ПАРА.</em></h2>
@@ -50,7 +53,7 @@
     <article class="journey-row"><img src="assets/frame-project-5.png" alt="Каркасный проект для загородного участка" width="1024" height="690" loading="lazy"><div class="journey-copy"><h3>ПРОИЗВОДИМ<br>С ВНИМАНИЕМ К ДЕТАЛЯМ</h3><ul><li><strong>Своё производство</strong> в Александрове — от 3 недель.</li><li><strong>Ель камерной сушки</strong>, осиновые полки и защитная обработка.</li><li>Проверяем качество, чтобы баня была <strong>готова к твоему отдыху.</strong></li></ul></div></article>
     <article class="journey-row"><img src="assets/frame-project-3.png" alt="Каркасный проект для загородного участка" width="1670" height="942" loading="lazy"><div class="journey-copy"><h3>ПРИВОЗИМ.<br>ТЫ НАЧИНАЕШЬ ОТДЫХАТЬ.</h3><ul><li>Доставим <strong>готовую баню</strong> или соберём её на участке.</li><li><strong>Сборку и установку берём на себя.</strong> Тебе остаётся выбрать день.</li><li>Готовую баню можно растопить <strong>в день установки.</strong></li></ul></div></article>
   </div>
-  <div class="section-action"><a class="button" href="#request-bottom">НАЧАТЬ С КОНСУЛЬТАЦИИ</a></div>
+  <div class="section-action"><a class="button" href="#quiz" data-open-quiz>Подобрать баню для себя</a></div>
 </div></section>
 <section class="section catalog" id="catalog">
       <div class="container">
@@ -67,37 +70,37 @@
             <div class="model-overlay">
               <span class="model-number">01</span>
               <div><h3>Викинг</h3><p>Выразительная двухчастная архитектура</p></div>
-              <strong>от 395 000 ₽</strong><a class="button model-request" href="#request-bottom">Рассчитать эту модель</a>
+              <strong>от 395 000 ₽</strong><a class="button model-request" href="#quiz" data-open-quiz>Подобрать баню для себя</a>
             </div>
           </article>
           <article class="model-card">
             <img src="assets/quadro-oval.jpg" alt="Баня Квадро-овал" width="1020" height="574" loading="lazy">
-            <div class="model-overlay"><span class="model-number">02</span><div><h3>Квадро-овал</h3><p>Простор и мягкая геометрия</p></div><strong>от 550 000 ₽</strong><a class="button model-request" href="#request-bottom">Рассчитать эту модель</a></div>
+            <div class="model-overlay"><span class="model-number">02</span><div><h3>Квадро-овал</h3><p>Простор и мягкая геометрия</p></div><strong>от 550 000 ₽</strong><a class="button model-request" href="#quiz" data-open-quiz>Подобрать баню для себя</a></div>
           </article>
           <article class="model-card">
             <img src="assets/quadro-bochka.jpg" alt="Баня Квадро-бочка" width="1020" height="574" loading="lazy">
-            <div class="model-overlay"><span class="model-number">03</span><div><h3>Квадро-бочка</h3><p>Практичный формат для участка</p></div><strong>от 210 000 ₽</strong><a class="button model-request" href="#request-bottom">Рассчитать эту модель</a></div>
+            <div class="model-overlay"><span class="model-number">03</span><div><h3>Квадро-бочка</h3><p>Практичный формат для участка</p></div><strong>от 210 000 ₽</strong><a class="button model-request" href="#quiz" data-open-quiz>Подобрать баню для себя</a></div>
           </article>
           <article class="model-card">
             <img src="assets/quadro-deluxe.jpg" alt="Баня Квадро Делюкс" width="1800" height="1013" loading="lazy">
-            <div class="model-overlay"><span class="model-number">04</span><div><h3>Квадро Делюкс</h3><p>Панорамное остекление и максимум света</p></div><strong>от 600 000 ₽</strong><a class="button model-request" href="#request-bottom">Рассчитать эту модель</a></div>
+            <div class="model-overlay"><span class="model-number">04</span><div><h3>Квадро Делюкс</h3><p>Панорамное остекление и максимум света</p></div><strong>от 600 000 ₽</strong><a class="button model-request" href="#quiz" data-open-quiz>Подобрать баню для себя</a></div>
           </article>
           <article class="model-card">
             <img src="assets/parus.jpg" alt="Баня Парус" width="709" height="927" loading="lazy">
-            <div class="model-overlay"><span class="model-number">05</span><div><h3>Парус</h3><p>Современный силуэт с прямой стеной</p></div><strong>от 390 000 ₽</strong><a class="button model-request" href="#request-bottom">Рассчитать эту модель</a></div>
+            <div class="model-overlay"><span class="model-number">05</span><div><h3>Парус</h3><p>Современный силуэт с прямой стеной</p></div><strong>от 390 000 ₽</strong><a class="button model-request" href="#quiz" data-open-quiz>Подобрать баню для себя</a></div>
           </article>
           <article class="model-card">
             <img src="assets/bochka.jpg" alt="Классическая баня-бочка" width="905" height="960" loading="lazy">
-            <div class="model-overlay"><span class="model-number">06</span><div><h3>Баня-бочка</h3><p>Компактная классика</p></div><strong>от 200 000 ₽</strong><a class="button model-request" href="#request-bottom">Рассчитать эту модель</a></div>
+            <div class="model-overlay"><span class="model-number">06</span><div><h3>Баня-бочка</h3><p>Компактная классика</p></div><strong>от 200 000 ₽</strong><a class="button model-request" href="#quiz" data-open-quiz>Подобрать баню для себя</a></div>
           </article>
           <article class="model-card">
             <img src="assets/trailer.jpg" alt="Баня на прицепе" width="664" height="517" loading="lazy">
-            <div class="model-overlay"><span class="model-number">07</span><div><h3>На прицепе</h3><p>Мобильная баня для новых маршрутов</p></div><strong>от 350 000 ₽</strong><a class="button model-request" href="#request-bottom">Рассчитать эту модель</a></div>
+            <div class="model-overlay"><span class="model-number">07</span><div><h3>На прицепе</h3><p>Мобильная баня для новых маршрутов</p></div><strong>от 350 000 ₽</strong><a class="button model-request" href="#quiz" data-open-quiz>Подобрать баню для себя</a></div>
           </article>
         </div>
       </div>
     </section>
-<section class="section frame-projects" id="frame-projects"><div class="container"><h2 class="center-heading">КАРКАСНЫЕ<br><em>ДОМА И БАНИ.</em></h2><div class="frame-projects-grid"><article class="frame-project"><img src="assets/frame-project-1.png" alt="Каркасный дом с террасой" width="1448" height="1086" loading="lazy"><a class="button" href="#request-bottom">Записаться на консультацию</a></article><article class="frame-project"><img src="assets/frame-project-2.png" alt="Каркасный дом с террасой" width="1561" height="1008" loading="lazy"><a class="button" href="#request-bottom">Записаться на консультацию</a></article><article class="frame-project"><img src="assets/frame-project-6.png" alt="Каркасный дом с террасой" width="1697" height="927" loading="lazy"><a class="button" href="#request-bottom">Записаться на консультацию</a></article><article class="frame-project"><img src="assets/frame-project-7.png" alt="Каркасный дом с панорамными окнами" width="1678" height="937" loading="lazy"><a class="button" href="#request-bottom">Записаться на консультацию</a></article><article class="frame-project"><img src="assets/frame-project-8.png" alt="Каркасный дом с панорамными окнами" width="547" height="365" loading="lazy"><a class="button" href="#request-bottom">Записаться на консультацию</a></article></div>
+<section class="section frame-projects" id="frame-projects"><div class="container"><h2 class="center-heading">КАРКАСНЫЕ<br><em>ДОМА И БАНИ.</em></h2><div class="frame-projects-grid"><article class="frame-project"><img src="assets/frame-project-1.png" alt="Каркасный дом с террасой" width="1448" height="1086" loading="lazy"><a class="button" href="#quiz" data-open-quiz>Подобрать баню для себя</a></article><article class="frame-project"><img src="assets/frame-project-2.png" alt="Каркасный дом с террасой" width="1561" height="1008" loading="lazy"><a class="button" href="#quiz" data-open-quiz>Подобрать баню для себя</a></article><article class="frame-project"><img src="assets/frame-project-6.png" alt="Каркасный дом с террасой" width="1697" height="927" loading="lazy"><a class="button" href="#quiz" data-open-quiz>Подобрать баню для себя</a></article><article class="frame-project"><img src="assets/frame-project-7.png" alt="Каркасный дом с панорамными окнами" width="1678" height="937" loading="lazy"><a class="button" href="#quiz" data-open-quiz>Подобрать баню для себя</a></article><article class="frame-project"><img src="assets/frame-project-8.png" alt="Каркасный дом с панорамными окнами" width="547" height="365" loading="lazy"><a class="button" href="#quiz" data-open-quiz>Подобрать баню для себя</a></article></div>
 <div class="equipment-teaser" id="equipment">
   <a class="equipment-link" href="equipment.html"><span><strong>Базовая комплектация бань-бочек</strong><small>Посмотреть, что уже входит</small></span><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
 </div></div></section>
@@ -122,7 +125,7 @@
     <article class="choice-panel choice-own"><h3>СВОЯ БАНЯ</h3><p class="choice-subtitle">Начать с решения сегодня</p>
       <p class="choice-price">от 200 000 <span>₽</span></p>
       <ul><li>Париться на своём участке, когда хочется</li><li>Собирать семью и друзей без спешки</li><li>Выбрать модель и цвет под свой дом</li><li>Получить готовую комплектацию с печью</li><li>Закрепить цену и срок в договоре</li></ul>
-      <a class="button button-full" href="#request-bottom">Я ВЫБИРАЮ СВОЮ БАНЮ</a>
+      <a class="button button-full" href="#quiz" data-open-quiz>Подобрать баню для себя</a>
     </article>
     <article class="choice-panel choice-wait"><h3>КОГДА-НИБУДЬ</h3><p class="choice-subtitle">Продолжать откладывать</p>
       <p class="choice-statement">Ещё один сезон<br>без своей бани.</p>
@@ -142,7 +145,7 @@
 <article class="benefit"><svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13h18l-2 8H5l-2-8Zm3 0V6a3 3 0 0 1 6 0"/><path d="M10 6h4m2 0v3m3-3v3"/></svg><h3>СПА У ТЕБЯ ДОМА, НАТУРАЛЬНО</h3><p>Живое дерево, веники, травяные пары и холодный контраст: всё, за что в городе платят тысячи, у тебя во дворе.</p></article>
 <article class="benefit"><svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3"/><circle cx="4" cy="9" r="2"/><circle cx="20" cy="9" r="2"/><path d="M7 21v-5a5 5 0 0 1 10 0v5M1 20v-4a3 3 0 0 1 3-3m19 7v-4a3 3 0 0 0-3-3"/></svg><h3>МЕСТО, ГДЕ СОБИРАЮТСЯ СВОИ</h3><p>Без гаджетов и спешки, только живое общение и настоящий отдых, здесь рождаются семейные традиции.</p></article>
 <article class="benefit"><svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-8 9 8M5 9v12h14V9m-9 12v-7h4v7"/></svg><h3>ВЛОЖЕНИЕ В ДОМ И В СЕБЯ</h3><p>Баня поднимает ценность участка и служит круглый год, без абонементов и очередей.</p></article></div>
-  <div class="section-action"><a class="button" href="#request-bottom">ВЫБРАТЬ БАНЮ ДЛЯ СЕБЯ</a><p><strong>Один раз купил.</strong> Отдыхаешь круглый год.</p></div>
+  <div class="section-action"><a class="button" href="#quiz" data-open-quiz>Подобрать баню для себя</a><p><strong>Один раз купил.</strong> Отдыхаешь круглый год.</p></div>
 </div></section>
 <section class="section reviews" id="reviews">
       <div class="container">
@@ -161,23 +164,12 @@
   <p class="price-announcement">Стоимость бань будет повышена в ближайшее время.</p>
   <p class="price-social"><strong>Больше 100 клиентов</strong> уже купили наши бани и наслаждаются настоящим отдыхом у себя на участке.</p>
   <p class="price-prompt"><strong>Зафиксируй свою цену сейчас, пока она не выросла.</strong></p>
-  <a class="button" href="#request-bottom">ЗАФИКСИРОВАТЬ ЦЕНУ</a>
+  <a class="button" href="#quiz" data-open-quiz>Подобрать баню для себя</a>
 
 </div></section>
 
-<section class="section final-cta" id="request-bottom"><div class="container final-cta-layout">
-  <div class="final-cta-copy"><h2>ЗАПИШИСЬ<br><em>НА КОНСУЛЬТАЦИЮ.</em></h2><p>Оставь имя и телефон. На бесплатной консультации подберём модель под твой участок, обсудим комплектацию и подготовим точный расчёт.</p>
-    <div class="form-promises"><span>Бесплатная консультация</span><span>Цена и срок в договоре</span></div>
-    <a class="request-phone" href="tel:+79157750909">+7 915 775-09-09</a><p class="request-hours">Каждый день</p>
-  </div>
-  <div class="request-card" id="request"><form class="lead-form lead-form-inline" data-lead-form>
-    <label><span>Ваше имя</span><input type="text" name="name" autocomplete="name" maxlength="80" placeholder="Ваше имя" required></label>
-    <label><span>Телефон</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="+7 999 000-00-00" required></label>
-    <label class="honeypot" aria-hidden="true">Сайт<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-    <label class="consent"><input type="checkbox" name="consent" required><span>Даю <a href="consent.html" target="_blank" rel="noopener">согласие на обработку данных</a>. <a href="privacy.html" target="_blank" rel="noopener">Политика</a></span></label>
-    <button class="button button-full" type="submit">Записаться на консультацию</button>
-    <p class="form-status" role="status" aria-live="polite"></p>
-  </form></div>
+<section class="section final-cta" id="request-bottom"><div class="container selection-repeat">
+<h2>НАЙДЁМ БАНЮ<br><em>ПОД ВАШИ ПОЖЕЛАНИЯ.</em></h2><p>Ответьте на четыре вопроса — поможем выбрать модель и комплектацию.</p><a class="button" href="#quiz" data-open-quiz>Подобрать баню для себя</a>
 </div></section>
 <section class="section advantages" id="advantages">
       <div class="container advantages-layout">
@@ -228,6 +220,25 @@
       <div><strong>Информация</strong><a href="privacy.html">Политика конфиденциальности</a><a href="#documents">Документы</a><span>© <span data-year></span> Бани-бочки Премиум</span></div>
     </div>
   </footer></main>
-<a class="mobile-cta" href="#request-bottom">Записаться на консультацию</a>
-<script src="script.js?v=20261009a" defer></script>
+<a class="mobile-cta" href="#quiz" data-open-quiz>Подобрать баню для себя</a>
+
+<dialog class="quiz-dialog" id="quiz" aria-labelledby="quiz-heading">
+  <div class="quiz-shell">
+    <button class="quiz-close" type="button" aria-label="Закрыть подбор"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    <div class="quiz-top"><span>Зафиксируйте за собой подарок</span><span class="quiz-clock"><span data-timer-label>Осталось</span> <time data-gift-timer>24:00:00</time></span></div>
+    <div class="quiz-progress-wrap"><progress class="quiz-progress" max="100" value="0" aria-label="Прогресс подбора">0%</progress><span class="quiz-progress-gift"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18v4H3zM5 13v8h14v-8M12 9v12"/><path d="M12 9H8a3 3 0 1 1 3-3l1 3Zm0 0h4a3 3 0 1 0-3-3l-1 3Z"/></svg></span></div>
+    <div class="quiz-progress-caption"><span id="quiz-step-label">Вопрос 1 из 4</span><span id="quiz-percent">0%</span></div>
+    <div id="quiz-question-view"><h2 id="quiz-heading" tabindex="-1"></h2><fieldset class="quiz-options"><legend class="sr-only">Выберите один вариант</legend></fieldset><div class="quiz-navigation"><button class="quiz-back" type="button">Назад</button><button class="button quiz-next" type="button" disabled>Далее</button></div></div>
+    <div id="quiz-result-view" hidden><h2 tabindex="-1" id="quiz-result-heading">Ваш подарок при заказе бани</h2><div class="quiz-gift-result"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18v4H3zM5 13v8h14v-8M12 9v12"/><path d="M12 9H8a3 3 0 1 1 3-3l1 3Zm0 0h4a3 3 0 1 0-3-3l-1 3Z"/></svg><p><strong>Дровник «Сота»</strong><span>и подспинники в комнату отдыха</span></p></div><p class="quiz-contact-intro">Оставьте телефон — обсудим подходящие варианты и закрепим подарок за вашей заявкой.</p><button class="quiz-edit" type="button">Изменить ответы</button><form class="lead-form lead-form-inline" data-lead-form>
+    <label><span>Ваше имя</span><input type="text" name="name" autocomplete="name" maxlength="80" placeholder="Ваше имя" required></label>
+    <label><span>Телефон</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="+7 999 000-00-00" required></label>
+    <label class="honeypot" aria-hidden="true">Сайт<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+    <label class="consent"><input type="checkbox" name="consent" required><span>Даю <a href="consent.html" target="_blank" rel="noopener">согласие на обработку данных</a>. <a href="privacy.html" target="_blank" rel="noopener">Политика</a></span></label>
+    <button class="button button-full" type="submit">Получить подбор и закрепить подарок</button>
+    <p class="form-status" role="status" aria-live="polite"></p>
+  </form></div>
+  </div>
+</dialog>
+<script src="script.js?v=20261027a" defer></script>
+<script src="quiz.js?v=20261027a" defer></script>
 </body></html>
