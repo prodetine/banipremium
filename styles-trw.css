@@ -301,3 +301,4 @@ body.quiz-open{overflow:hidden}
 .quiz-page .phone-reassurance{font-size:13px;line-height:1.5;color:#c0cbd6;margin-top:-7px}
 @media(max-width:500px){.selection-button-wrap{display:block;padding-right:42px}.selection-arrow{left:auto;right:0;top:-4px;width:42px;height:48px}.hero-selection .selection-button-wrap .button{font-size:16px;padding-inline:10px}.quiz-page .phone-reassurance{font-size:12px}}
 @media(max-width:360px){.hero-selection .selection-button-wrap .button{font-size:14px}}
+@media(min-width:1100px){.hero-selection h1{position:relative;left:clamp(34px,4vw,76px)}}
